@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="e90ef1da-2f25-4a95-b587-330700a98d2c" Publisher="CN=Jake" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="e90ef1da-2f25-4a95-b587-330700a98d2c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="13d641ef-d191-4a47-b424-96be7488091d" Publisher="CN=Jake" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="13d641ef-d191-4a47-b424-96be7488091d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>RestaurantManager.UniversalWindows</DisplayName>
     <PublisherDisplayName>Jake</PublisherDisplayName>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="RestaurantManager.UniversalWindows.App">
-      <uap:VisualElements DisplayName="RestaurantManager.UniversalWindows" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="RestaurantManager.UniversalWindows" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="RestaurantManager.UniversalWindows" Square150x150Logo="Assets\LargeSquareLogo.png" Square44x44Logo="Assets\SmallSquareLogo.png" Description="RestaurantManager.UniversalWindows" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Restaurant Manager">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
