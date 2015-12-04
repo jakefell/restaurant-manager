@@ -14,8 +14,6 @@
             <Setter Property="FontSize" Value="32" />
         </Style>
 
-        <models:DataManager x:Key="DataManager" />
-
     </Application.Resources>
 
 </Application>
