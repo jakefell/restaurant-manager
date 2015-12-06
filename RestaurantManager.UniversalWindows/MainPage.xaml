@@ -7,6 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <ControlTemplate x:Key="MainMenuButton" TargetType="Button">
+            <Grid x:Name="RootGrid" Background="{TemplateBinding Background}" CornerRadius="15">
+                <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Grid>
+        </ControlTemplate>
+    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*" />
@@ -17,9 +25,9 @@
             <ColumnDefinition Width="0.5*" />
             <ColumnDefinition Width="0.5*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Restaurant Manager" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="50" />
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Internal Test Version" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
-        <Button Grid.Row="2" Grid.Column="0" Content="Go to Orders View" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ExpeditePage_Click" />
-        <Button Grid.Row="2" Grid.Column="1" Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center" Click="OrderPage_Click" />
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Restaurant Manager" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource HeaderTextBlockStyle}" />
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Internal Test Version" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource SubheaderTextBlockStyle}" />
+        <Button Grid.Row="2" Grid.Column="0" Content="Go to Orders View" Template="{StaticResource MainMenuButton}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ExpeditePage_Click" />
+        <Button Grid.Row="2" Grid.Column="1" Content="Submit Order" Template="{StaticResource MainMenuButton}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="OrderPage_Click" />
     </Grid>
 </Page>

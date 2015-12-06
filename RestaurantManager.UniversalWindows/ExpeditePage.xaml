@@ -23,7 +23,36 @@
             <RowDefinition Height="0.9*" />
             <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
-        <GridView Grid.Row="0" ItemsSource="{Binding OrderItems}" />
-            <Button Grid.Row="1" Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <GridView Grid.Row="0" ItemsSource="{Binding OrderItems}">
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="Margin" Value="10"/>
+                </Style>
+            </GridView.ItemContainerStyle>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Border Width="280" Height="150">
+                            <ListBox ItemsSource="{Binding Items}" DisplayMemberPath="Title" />
+                        </Border>
+                        <Grid Background="Gray" Height="200">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.3*" />
+                                <RowDefinition Height="0.4*" />
+                                <RowDefinition Height="0.3*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Margin="10" FontSize="25" Text="{Binding Table.Description}" />
+                            <TextBlock Grid.Row="1" Margin="10">
+                                <Run Text="Special Notes:" />
+                                <LineBreak />
+                                <Run Text="{Binding SpecialRequests}" />
+                            </TextBlock>
+                            <Button Grid.Row="3" Content="Delete" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <Button Grid.Row="1" Content="Clear All Orders" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </Page>
