@@ -20,9 +20,23 @@ namespace RestaurantManager.ViewModels
 
         private async void LoadData()
         {
+            IsLoading = true;
+
             this.Repository = await RestaurantContextFactory.GetRestaurantContextAsync();
+
+            IsLoading = false;
+
             OnDataLoaded();
         }
+
+        private bool _isLoading;
+
+        public bool IsLoading
+        {
+            get { return _isLoading; }
+            set { _isLoading = value; NotifyPropertyChanged(); }
+        }
+
 
         protected abstract void OnDataLoaded();
 
