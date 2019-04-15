@@ -20,6 +20,8 @@ namespace RestaurantManager.Models
 
         public bool Expedite { get; set; }
 
+        public string New { get; set; }
+
         public override string ToString()
         {
             return String.Join(", ", Items.Select(i => i.Title));
