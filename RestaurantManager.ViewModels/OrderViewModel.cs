@@ -91,6 +91,8 @@ namespace RestaurantManager.ViewModels
 
         private async void SubmitOrder()
         {
+            // This is a test comment.
+
             base.Repository.Orders.Add(new Order
             {
                 Complete = false,
