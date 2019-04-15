@@ -22,6 +22,8 @@ namespace RestaurantManager.Models
 
         public string New { get; set; }
 
+        public bool New2 { get; set; }
+
         public override string ToString()
         {
             return String.Join(", ", Items.Select(i => i.Title));
